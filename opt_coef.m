@@ -7,7 +7,7 @@ function beta = opt_coef(k)
   W(:, 1) = 1;
   if k >= 2; W(:, 2) = 2*x+1; end
   for i=3:k
-    W(:,i) = (2*i) .* W(:,i-1) - W(:,i-2);
+    W(:,i) = (2*x) .* W(:,i-1) - W(:,i-2);
   end
 
   r = opt_roots(k);  % Roots of optimal polynomial p
